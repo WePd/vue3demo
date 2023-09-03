@@ -1,5 +1,5 @@
 import httpInstance from '@/utils/http.ts';
-import { BannerResult, BannerRequest, HotListResult, ProductResult } from '@/api/model/homeModel.ts';
+import { BannerResult, BannerRequest, HotListResult, ProductResult, Goods } from '@/api/model/homeModel.ts';
 
 //获取轮播图
 export function getBannerAPI(params: BannerRequest): Result<BannerResult[]> {
@@ -7,7 +7,7 @@ export function getBannerAPI(params: BannerRequest): Result<BannerResult[]> {
   return httpInstance({ url: '/home/banner', params: { distributionSite } });
 }
 //获取新鲜好物
-export function getNewApi(): Result<Good[]> {
+export function getNewApi(): Result<Goods> {
   return httpInstance({ url: '/home/new' });
 }
 //获取人气推荐

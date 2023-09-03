@@ -22,3 +22,13 @@ export interface HotListResult {
 export interface ProductResult extends ClassData {
   saleInfo: string;
 }
+
+export interface Goods {
+  id: string;
+  name: string;
+  desc: string;
+  picture: string;
+  price: string;
+  discount: any;
+  orderNum: number;
+}
